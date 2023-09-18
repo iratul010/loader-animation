@@ -1,0 +1,182 @@
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+
+  /* Create a custom background pattern with alternating yellow, red, and black stripes */
+  --c: no-repeat linear-gradient(yellow 0 0, yellow 0 0),
+    no-repeat linear-gradient(red 0 0, red 0 0),
+    no-repeat linear-gradient(black 0 0, black 0 0);
+
+  /* Apply the background pattern in three parts */
+  background: var(--c) 0% 50%, var(--c) 33.33% 50%, var(--c) 66.67% 50%;
+
+  /* Adjust the size of the background stripes */
+  background-size: 20% 50%;
+
+  /* Add a loading animation */
+  animation: loading 1s infinite linear;
+}
+@keyframes loading {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+//next update loader different color with jump
+
+/* Define the styling for the loader element */
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+
+  /* Create a custom background pattern with alternating stylish colors */
+  --c: no-repeat linear-gradient(#f4d03f 0 0, #f4d03f 0 0),
+    no-repeat linear-gradient(#e74c3c 0 0, #e74c3c 0 0),
+    no-repeat linear-gradient(#2c3e50 0 0, #2c3e50 0 0);
+
+  /* Apply the background pattern in three parts */
+  background: var(--c) 0% 50%, var(--c) 33.33% 50%, var(--c) 66.67% 50%;
+
+  /* Adjust the size of the background stripes */
+  background-size: 20% 50%;
+
+  /* Add a nicely animated loading effect */
+  animation: loading 2s infinite linear;
+}
+
+/* Define the animation keyframes for a smoother effect */
+@keyframes loading {
+  0% {
+    background-position: 0% 0, 50% 50%, 100% 50%;
+  }
+  25% {
+    background-position: 0% 100%, 50% 0, 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%, 50% 100%, 100% 0;
+  }
+  75% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+  100% {
+    background-position: 0% 0, 50% 50%, 100% 50%;
+  }
+}
+
+///////JONAS
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(#333 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+///SPINNER 
+/* Define the styling for the loader element */
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db; /* Change this color to your desired loader color */
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+/* Define the animation keyframes for the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+///bubble 
+/* Define the styling for the loader container */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Define the styling for the loader ball */
+.loader {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db; /* Change this color to your desired loader color */
+  border-radius: 50%;
+  animation: bounce 1.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Define the animation keyframes for the bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+///spin but different color with
+/* Define the styling for the loader element */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #ff6b6b; /* Change this color to your desired loader color */
+  border-bottom: 4px solid transparent;
+  animation: spin 1s linear infinite, changeColor 5s infinite;
+}
+
+/* Define the animation keyframes for the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Define the animation keyframes for changing colors */
+@keyframes changeColor {
+  0%, 100% {
+    border-top-color: #ff6b6b; /* Red */
+  }
+  25% {
+    border-top-color: #6ab04c; /* Green */
+  }
+  50% {
+    border-top-color: #f9ca24; /* Yellow */
+  }
+  75% {
+    border-top-color: #686de0; /* Purple */
+  }
+}
